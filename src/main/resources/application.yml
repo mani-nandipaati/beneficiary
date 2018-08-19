@@ -2,17 +2,16 @@
 spring:
   application:
     name: bene
-
   jpa:
     generate-ddl: true
     show-sql: true
+  cloud:
+    config:
+      uri: http://configshost.cfapps.io
 
-eureka:
-  client:
-    register-with-eureka: true
-    fetch-registry: true
-    service-url:
-      defaultZone: https://ureka.cfapps.io/eureka
+management:
+  security:
+    enabled: false
 
 server:
   port: 8084
